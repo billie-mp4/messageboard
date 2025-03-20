@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>messageboard</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <ul>
+              <% messages.forEach(message=>{ %>
+                <li>
+                    <h2><%= message.text %></h2>
+                    <h3>by <%= message.user %></h3>
+                    <sub><%= message.added %></sub>
+                    <hr>
+                </li>
+              <% }) %>
+        </ul>
+        <a href="/new"><h1>compose new message</h1></a>
+    </body>
+</html>
