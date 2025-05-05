@@ -1,7 +1,18 @@
-<form method="POST" action="/new">
-    <label for="user">user</label>
-    <input type="text" name="user" />
-    <label for="text">text</label>
-    <input type="text" name="text" />
-    <button type="submit">submit</button>
-</form>
+<html>
+    <body>
+        <% if (locals.errors) {%>
+          <ul>
+            <% errors.forEach(function(error) { %>
+              <li><%= error.msg %></li>
+            <% }) %>
+          </ul>
+        <% } %>
+          <form method="POST" action="/new">
+            <label for="name">name</label>
+            <input type="text" name="name" />
+            <label for="text">text</label>
+            <input type="text" name="text" />
+            <button type="submit">submit</button>
+        </form>
+    </body>
+</html>
